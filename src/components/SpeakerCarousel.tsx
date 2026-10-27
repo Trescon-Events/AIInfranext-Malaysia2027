@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/assets";
 
 export default function SpeakerCarousel() {
   const speakers = [
@@ -90,7 +91,7 @@ export default function SpeakerCarousel() {
               {s.image ? (
                 <div style={{ position: "relative", width: "100%", height: "100%" }}>
                   <Image
-                    src={s.image}
+                    src={getAssetPath(s.image)}
                     alt={s.name}
                     fill
                     sizes="290px"

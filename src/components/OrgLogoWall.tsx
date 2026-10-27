@@ -1,4 +1,5 @@
 import React from "react";
+import { getAssetPath } from "@/lib/assets";
 
 interface OrgItem {
   name: string;
@@ -64,7 +65,7 @@ export default function OrgLogoWall() {
           {malaysiaLogos.map((org, i) => (
             <div key={i} className="logo-wall-item" title={org.name}>
               <img
-                src={org.logo}
+                src={getAssetPath(org.logo)}
                 alt={org.name}
                 loading="lazy"
                 decoding="async"
@@ -85,7 +86,7 @@ export default function OrgLogoWall() {
           {regionalLogos.map((org, i) => (
             <div key={i} className="logo-wall-item" title={org.name}>
               <img
-                src={org.logo}
+                src={getAssetPath(org.logo)}
                 alt={org.name}
                 loading="lazy"
                 decoding="async"

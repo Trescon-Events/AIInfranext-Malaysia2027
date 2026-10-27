@@ -2,6 +2,7 @@ import React from "react";
 import PdpaConsent from "@/components/PdpaConsent";
 import FormCard from "@/components/FormCard";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/assets";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function InvitationPage() {
         <div className="container reduced-header-wrap">
           <div className="brand-link">
             <Image
-              src="/images/logo/logo-horizontal.svg"
+              src={getAssetPath("/images/logo/logo-horizontal.svg")}
               alt="AI InfraNext"
               width={260}
               height={38}

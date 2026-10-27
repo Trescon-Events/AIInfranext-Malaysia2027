@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/assets";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StatRow from "@/components/StatRow";
@@ -100,13 +101,13 @@ export default function HomePage() {
           <div style={{ position: "absolute", inset: 0, overflow: "hidden", pointerEvents: "none", zIndex: 0 }} aria-hidden="true">
             <video
               id="hero-video"
-              src="/video/hero-reel.mp4"
+              src={getAssetPath("/video/hero-reel.mp4")}
               autoPlay
               loop
               muted
               playsInline
               preload="auto"
-              poster="/images/hero-video-poster.jpg"
+              poster={getAssetPath("/images/hero-video-poster.jpg")}
               style={{
                 width: "100%",
                 height: "100%",

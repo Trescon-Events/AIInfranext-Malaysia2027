@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import PillarCards from "@/components/PillarCards";
 import TwoDoorAttendance from "@/components/TwoDoorAttendance";
 import CtaTwinBands from "@/components/CtaTwinBands";
+import { getAssetPath } from "@/lib/assets";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -24,13 +25,13 @@ export default function AboutPage() {
           <div style={{ position: "absolute", inset: 0, overflow: "hidden", pointerEvents: "none", zIndex: 0 }} aria-hidden="true">
             <video
               id="about-hero-video"
-              src="/videos/s4_ambient_stage.mp4"
+              src={getAssetPath("/videos/s4_ambient_stage.mp4")}
               autoPlay
               loop
               muted
               playsInline
               preload="auto"
-              poster="/images/s4-video-poster.jpg"
+              poster={getAssetPath("/images/s4-video-poster.jpg")}
               style={{
                 width: "100%",
                 height: "100%",

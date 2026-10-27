@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/assets";
 
 export default function Header() {
   const [isCondensed, setIsCondensed] = useState(false);
@@ -40,7 +41,7 @@ export default function Header() {
       <div className="container nav-wrap">
         <Link href="/" className="brand-link" aria-label="AI InfraNext Home">
           <Image
-            src="/images/logo/logo-horizontal.svg"
+            src={getAssetPath("/images/logo/logo-horizontal.svg")}
             alt="AI InfraNext | Malaysia 2027"
             width={280}
             height={42}

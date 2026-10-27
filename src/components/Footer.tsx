@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/assets";
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
           <div className="footer-brand">
             <Link href="/" className="footer-brand-link" aria-label="AI InfraNext Home">
               <Image
-                src="/brand/horizontal-dark-bg.svg"
+                src={getAssetPath("/brand/horizontal-dark-bg.svg")}
                 alt="AI InfraNext | Malaysia 2027"
                 width={173}
                 height={28}

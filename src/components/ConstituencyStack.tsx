@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/assets";
 
 export default function ConstituencyStack() {
   const groups = [
@@ -68,7 +69,7 @@ export default function ConstituencyStack() {
             }}
           >
             <Image
-              src={g.image}
+              src={getAssetPath(g.image)}
               alt={g.alt}
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
