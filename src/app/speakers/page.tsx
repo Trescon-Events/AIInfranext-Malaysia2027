@@ -2,6 +2,7 @@ import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SpeakerCarousel from "@/components/SpeakerCarousel";
+import HubSpotForm from "@/components/HubSpotForm";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -33,9 +34,9 @@ export default function SpeakersPage() {
               </p>
             </div>
 
-            <Link href="/speak/" className="btn btn-primary">
-              Apply to speak →
-            </Link>
+            <a href="#speaker-onboarding" className="btn btn-primary">
+              Speaker onboarding →
+            </a>
           </div>
         </section>
 
@@ -51,16 +52,21 @@ export default function SpeakersPage() {
           </div>
         </section>
 
-        <section className="section section-light" style={{ textAlign: "center" }}>
+        <section id="speaker-onboarding" className="section section-dark">
           <div className="container-narrow">
-            <div className="eyebrow eyebrow-dark">Call For Speakers</div>
-            <h2>Speak at the summit</h2>
-            <p style={{ maxWidth: "68ch", margin: "0 auto 24px" }}>
-              If you are leading production AI infrastructure deployments, managing accelerated compute clusters, or solving power and cooling constraints in Malaysia, we invite you to share your insights.
+            <div className="eyebrow" style={{ textAlign: "center", marginBottom: "8px" }}>Speaker Faculty</div>
+            <h2 style={{ color: "#FFFFFF", textAlign: "center", marginBottom: "12px" }}>Speaker onboarding</h2>
+            <p style={{ textAlign: "center", color: "#94A3B8", maxWidth: "600px", margin: "0 auto 32px" }}>
+              Join the distinguished faculty of AI InfraNext | Malaysia 2027. Submit your speaker onboarding details below.
             </p>
-            <Link href="/speak/" className="btn btn-primary">
-              Apply to speak →
-            </Link>
+            <HubSpotForm
+              portalId="2953901"
+              formId="c0ca2495-3e0a-4f16-a57a-ee58008d414d"
+              region="na1"
+              title="Speaker Onboarding"
+              subtitle="Please provide your faculty details and bio for inclusion in the official summit programme."
+              followUpNote="Our speaker operations team will coordinate stage logistics and briefing sessions."
+            />
           </div>
         </section>
       </main>

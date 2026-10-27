@@ -2426,3 +2426,366 @@ code {
   color: var(--grey);
 }
 
+
+
+/* ==========================================================================
+   GLOBAL FORM DARK THEME SYSTEM (HubSpot, Native & Custom Forms)
+   ========================================================================== */
+
+/* 1. Form Container & Card Foundation */
+.form-container-standard,
+.form-wrapper,
+.ticket-wrapper {
+  width: 100% !important;
+  max-width: 56rem !important; /* 896px max-w-4xl */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+.form-card-dark {
+  background-color: #0B111E !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7) !important;
+  color: #F8FAFC !important;
+}
+
+/* 2. Global HubSpot Form Embed Overrides */
+.hs-form,
+.hs-form-private,
+form[class*="hs-form-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  font-family: inherit !important;
+  color: #F8FAFC !important;
+  box-sizing: border-box !important;
+}
+
+/* Multi-column grid rows & fieldsets (Eliminates HubSpot 500px cap and dead space) */
+.hs-form fieldset,
+.hs-form fieldset[class*="form-columns-"],
+[class*="hs-form-"] fieldset,
+.hs-form .form-columns-0,
+.hs-form .form-columns-1,
+.hs-form .form-columns-2,
+.hs-form .form-columns-3,
+.hs-form .hs-form-row,
+.hs-form .hs-form-row > div {
+  display: grid !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin-bottom: 1.25rem !important;
+  gap: 1rem !important;
+  float: none !important;
+  box-sizing: border-box !important;
+}
+
+.hs-form .form-columns-2,
+.hs-form fieldset.form-columns-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.hs-form .form-columns-3,
+.hs-form fieldset.form-columns-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.hs-form .form-columns-1,
+.hs-form .form-columns-0,
+.hs-form fieldset.form-columns-1,
+.hs-form fieldset.form-columns-0 {
+  grid-template-columns: 1fr !important;
+}
+
+@media (max-width: 640px) {
+  .hs-form .form-columns-2,
+  .hs-form .form-columns-3,
+  .hs-form fieldset.form-columns-2,
+  .hs-form fieldset.form-columns-3 {
+    grid-template-columns: 1fr !important;
+    gap: 0.875rem !important;
+  }
+}
+
+/* Field items & input wrappers */
+.hs-form .hs-form-field,
+.hs-form .field,
+.hs-form .input {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  float: none !important;
+  margin-bottom: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.hs-form .hs-form-field:not(:last-child) {
+  margin-right: 0 !important;
+}
+
+/* Labels, legends and field text */
+.hs-form label:not(.hs-error-msg):not(.hs-form-checkbox-display):not(.hs-form-booleancheckbox-display):not(.hs-form-radio-display),
+.hs-form .hs-label,
+.hs-form legend {
+  display: block !important;
+  color: #E2E8F0 !important;
+  font-size: 0.8125rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.025em !important;
+  margin-bottom: 0.375rem !important;
+  font-family: inherit !important;
+}
+
+.hs-form .hs-form-required {
+  color: #00B4C5 !important;
+  font-weight: 700 !important;
+  margin-left: 0.25rem !important;
+}
+
+.hs-form .hs-field-desc {
+  color: #94A3B8 !important;
+  font-size: 0.75rem !important;
+  line-height: 1.4 !important;
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.375rem !important;
+}
+
+/* Rich text blocks and section headers inside HubSpot forms (e.g. CONFIRMATION, PRIMARY DETAILS) */
+.hs-form .hs-richtext {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+}
+
+.hs-form .hs-richtext,
+.hs-form .hs-richtext *,
+.hs-form h1,
+.hs-form h2,
+.hs-form h3,
+.hs-form h4,
+.hs-form h5,
+.hs-form h6,
+.hs-form strong {
+  color: #FFFFFF !important;
+  font-family: inherit !important;
+}
+
+.hs-form .hs-richtext h5,
+.hs-form .hs-richtext h4,
+.hs-form .hs-richtext h3 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+  font-size: 0.875rem !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+}
+
+/* Input, select and textarea fields */
+.hs-form input.hs-input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="button"]),
+.hs-form textarea.hs-input,
+.hs-form select.hs-input,
+.hs-form .hs-input {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  min-height: 46px !important;
+  padding: 0.75rem 1rem !important;
+  background-color: #161F30 !important;
+  border: 1px solid #1E293B !important;
+  border-radius: 0.5rem !important;
+  color: #FFFFFF !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  font-family: inherit !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.25) !important;
+  transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.hs-form textarea.hs-input {
+  min-height: 90px !important;
+  resize: vertical !important;
+}
+
+.hs-form input.hs-input::placeholder,
+.hs-form textarea.hs-input::placeholder {
+  color: #64748B !important;
+}
+
+.hs-form input.hs-input:focus,
+.hs-form textarea.hs-input:focus,
+.hs-form select.hs-input:focus {
+  outline: none !important;
+  background-color: #1A2438 !important;
+  border-color: #00B4C5 !important;
+  box-shadow: 0 0 0 2px rgba(0, 180, 197, 0.25) !important;
+}
+
+/* Select options */
+.hs-form select.hs-input option {
+  background-color: #0D1526 !important;
+  color: #FFFFFF !important;
+  padding: 8px !important;
+}
+
+/* Checkboxes and Radios */
+.hs-form ul.inputs-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0.5rem 0 !important;
+}
+
+.hs-form ul.inputs-list li {
+  margin-bottom: 0.625rem !important;
+}
+
+.hs-form .hs-form-checkbox-display,
+.hs-form .hs-form-booleancheckbox-display,
+.hs-form .hs-form-radio-display,
+.hs-form .hs-fieldtype-booleancheckbox label {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 0.75rem !important;
+  cursor: pointer !important;
+  font-size: 0.8125rem !important;
+  color: #CBD5E1 !important;
+  line-height: 1.5 !important;
+  font-weight: 400 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.hs-form .hs-form-checkbox-display input[type="checkbox"],
+.hs-form .hs-form-booleancheckbox-display input[type="checkbox"],
+.hs-form .hs-fieldtype-booleancheckbox input[type="checkbox"],
+.hs-form input[type="checkbox"].hs-input,
+.hs-form input[type="radio"].hs-input {
+  width: 1.125rem !important;
+  height: 1.125rem !important;
+  min-height: 1.125rem !important;
+  max-width: 1.125rem !important;
+  margin: 0.125rem 0 0 0 !important;
+  flex-shrink: 0 !important;
+  border-radius: 0.25rem !important;
+  border: 1px solid #334155 !important;
+  background-color: #161F30 !important;
+  accent-color: #00B4C5 !important;
+  cursor: pointer !important;
+}
+
+.hs-form a {
+  color: #00B4C5 !important;
+  text-decoration: underline !important;
+}
+
+.hs-form a:hover {
+  color: #2EE8D1 !important;
+}
+
+/* Legal Consent & Disclaimers */
+.hs-form .legal-consent-container {
+  color: #94A3B8 !important;
+  font-size: 0.75rem !important;
+  line-height: 1.55 !important;
+  margin-top: 1.25rem !important;
+  padding-top: 1rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.hs-form .legal-consent-container p {
+  color: #94A3B8 !important;
+  font-size: 0.75rem !important;
+}
+
+.hs-form .legal-consent-container a {
+  color: #00B4C5 !important;
+  text-decoration: underline !important;
+}
+
+.hs-form .legal-consent-container a:hover {
+  color: #2EE8D1 !important;
+}
+
+/* Submit Actions & Button */
+.hs-form .hs-submit,
+.hs-form .actions {
+  margin-top: 1.5rem !important;
+  padding-top: 0.5rem !important;
+}
+
+.hs-form .hs-button,
+.hs-form input[type="submit"].hs-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 48px !important;
+  padding: 0.875rem 2rem !important;
+  background: linear-gradient(135deg, #0036A6 0%, #006B88 55%, #009AA8 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 0.9375rem !important;
+  letter-spacing: 0.025em !important;
+  border: 1px solid rgba(46, 232, 209, 0.35) !important;
+  border-radius: 0.5rem !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 2px 10px rgba(0, 54, 166, 0.35) !important;
+  cursor: pointer !important;
+  transition: all 150ms ease !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.hs-form .hs-button:hover,
+.hs-form input[type="submit"].hs-button:hover {
+  background: linear-gradient(135deg, #0045C8 0%, #00879E 55%, #00B4C5 100%) !important;
+  border-color: rgba(46, 232, 209, 0.7) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 4px 18px rgba(0, 180, 197, 0.45) !important;
+  transform: translateY(-1px) !important;
+}
+
+.hs-form .hs-button:active,
+.hs-form input[type="submit"].hs-button:active {
+  transform: scale(0.98) !important;
+}
+
+/* Error Messages & Validation States */
+.hs-form .hs-error-msgs {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0.375rem 0 0 !important;
+}
+
+.hs-form .hs-error-msgs label,
+.hs-form .hs-error-msg {
+  color: #F87171 !important;
+  font-size: 0.75rem !important;
+  font-family: ui-monospace, SFMono-Regular, monospace !important;
+  margin-top: 0.25rem !important;
+}
+
+.hs-form input.invalid.error,
+.hs-form textarea.invalid.error,
+.hs-form select.invalid.error {
+  border-color: #EF4444 !important;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25) !important;
+}
+
+/* Form Success / Submission Confirmation */
+.hs-form .submitted-message {
+  color: #E2E8F0 !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  padding: 2.5rem 1.5rem !important;
+  text-align: center !important;
+  background: rgba(0, 180, 197, 0.08) !important;
+  border: 1px solid rgba(0, 180, 197, 0.25) !important;
+  border-radius: 0.75rem !important;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

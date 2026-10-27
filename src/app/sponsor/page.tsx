@@ -2,7 +2,7 @@ import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FindRowAccordion from "@/components/FindRowAccordion";
-import FormCard from "@/components/FormCard";
+import HubSpotForm from "@/components/HubSpotForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -145,55 +145,14 @@ export default function SponsorPage() {
 
         <section className="section section-wash" id="prospectus-form">
           <div className="container-narrow">
-            <FormCard
-              title="Tell us who you are trying to reach"
-              subtitle="Complete the details below. We will send the comprehensive sponsorship prospectus and follow up within two working days."
-              submitText="Request the prospectus"
-              followUpNote="We will send the prospectus and follow up within two working days."
-            >
-              <div className="form-group">
-                <label className="form-label">Full name</label>
-                <input type="text" className="form-control" required placeholder="e.g. David Wong" />
-              </div>
-
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-                <div className="form-group">
-                  <label className="form-label">Work email</label>
-                  <input type="email" className="form-control" required placeholder="name@company.com" />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Organisation</label>
-                  <input type="text" className="form-control" required placeholder="Company name" />
-                </div>
-              </div>
-
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-                <div className="form-group">
-                  <label className="form-label">Job title</label>
-                  <input type="text" className="form-control" required placeholder="e.g. VP Infrastructure" />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Country</label>
-                  <input type="text" className="form-control" required placeholder="e.g. Malaysia, Singapore" />
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">What you are interested in</label>
-                <select className="form-control" required defaultValue="">
-                  <option value="">Select an option...</option>
-                  <option value="Sponsorship">Sponsorship (Lead, Platinum, Gold, Silver, Bronze)</option>
-                  <option value="CXO Boardroom">CXO Boardroom Partner</option>
-                  <option value="Exhibition">Exhibition Space (9 SQM / 4 SQM)</option>
-                  <option value="Not sure yet">Not sure yet — discuss options</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">Which buyers you are trying to reach</label>
-                <textarea className="form-control" required placeholder="e.g. Enterprise CIOs in banking specifying high-density compute..."></textarea>
-              </div>
-            </FormCard>
+            <HubSpotForm
+              portalId="2953901"
+              formId="b1e6d4f1-25f4-4b36-8d2a-23b1f65b82de"
+              region="na1"
+              title="Sponsor Onboarding"
+              subtitle="Complete the details below to onboard as a sponsor or request the comprehensive sponsorship prospectus."
+              followUpNote="We will review your requirements and follow up within two working days."
+            />
           </div>
         </section>
       </main>

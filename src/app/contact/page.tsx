@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FormCard from "@/components/FormCard";
+import HubSpotForm from "@/components/HubSpotForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,50 +27,14 @@ export default function ContactPage() {
 
         <section className="section section-wash">
           <div className="container-narrow">
-            <FormCard
-              title="Direct Enquiry Desk"
-              subtitle="Our operations and partnership team will route your enquiry directly."
-              submitText="Send message"
-            >
-              <div className="form-group">
-                <label className="form-label">Full name</label>
-                <input type="text" className="form-control" required placeholder="e.g. Samuel Lim" />
-              </div>
-
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-                <div className="form-group">
-                  <label className="form-label">Work email</label>
-                  <input type="email" className="form-control" required placeholder="name@company.com" />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Organisation / Enterprise name</label>
-                  <input type="text" className="form-control" required placeholder="Company name" />
-                </div>
-              </div>
-
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-                <div className="form-group">
-                  <label className="form-label">Job title</label>
-                  <input type="text" className="form-control" required placeholder="Job title" />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Enquiry department</label>
-                  <select className="form-control" required defaultValue="">
-                    <option value="">Select department...</option>
-                    <option value="Delegate & Registration">Delegate Operations &amp; Registration</option>
-                    <option value="Sponsorship & Exhibition">Commercial Partnerships &amp; Sponsorship</option>
-                    <option value="Agenda & Speaking">Editorial Agenda &amp; Speaking</option>
-                    <option value="Press & Media">Media Accreditation &amp; Press</option>
-                    <option value="General Operations">General Event Operations</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">Message</label>
-                <textarea className="form-control" required placeholder="How can our team assist you?"></textarea>
-              </div>
-            </FormCard>
+            <HubSpotForm
+              portalId="2953901"
+              formId="22d92da1-2e05-4c72-a2df-4f79b604d7c7"
+              region="na1"
+              title="General Inquiry"
+              subtitle="Our operations and partnership team will route your enquiry directly and follow up."
+              followUpNote="For urgent matters, our summit coordination desk responds within one working day."
+            />
           </div>
         </section>
       </main>

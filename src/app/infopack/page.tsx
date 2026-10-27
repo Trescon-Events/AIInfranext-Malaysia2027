@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FormCard from "@/components/FormCard";
+import HubSpotForm from "@/components/HubSpotForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -27,50 +27,14 @@ export default function InfopackPage() {
 
         <section className="section section-wash">
           <div className="container-narrow">
-            <FormCard
-              title="Infopack Request"
-              subtitle="Enter your business details to receive the comprehensive package directly."
-              submitText="Send the infopack"
+            <HubSpotForm
+              portalId="2953901"
+              formId="066a8991-ccc7-4140-8447-7d3ca5cdc5d8"
+              region="na1"
+              title="Download Infopack - Sponsor"
+              subtitle="Enter your business details to receive the comprehensive sponsorship prospectus and commercial infopack."
               followUpNote="The infopack will be dispatched immediately to your corporate email."
-            >
-              <div className="form-group">
-                <label className="form-label">Full name</label>
-                <input type="text" className="form-control" required placeholder="e.g. Aaron Teo" />
-              </div>
-
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-                <div className="form-group">
-                  <label className="form-label">Work email address</label>
-                  <input type="email" className="form-control" required placeholder="name@company.com" />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Organisation / Enterprise name</label>
-                  <input type="text" className="form-control" required placeholder="Company name" />
-                </div>
-              </div>
-
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-                <div className="form-group">
-                  <label className="form-label">Job title</label>
-                  <input type="text" className="form-control" required placeholder="e.g. Commercial Director" />
-                </div>
-                <div className="form-group">
-                  <label className="form-label">Country</label>
-                  <input type="text" className="form-control" required placeholder="e.g. Malaysia" />
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label className="form-label">Primary interest</label>
-                <select className="form-control" required defaultValue="">
-                  <option value="">Select option...</option>
-                  <option value="Sponsorship Prospectus">Comprehensive Sponsorship Prospectus</option>
-                  <option value="CXO Boardroom">CXO Boardroom Partnership Details</option>
-                  <option value="Exhibition Floorplan">Exhibition Floorplan &amp; Packages</option>
-                  <option value="All Commercial Options">All Commercial Options</option>
-                </select>
-              </div>
-            </FormCard>
+            />
           </div>
         </section>
       </main>
