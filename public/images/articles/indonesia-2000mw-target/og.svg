@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="What Indonesia's 2,000MW target actually requires – AI InfraNext Indonesia 2026">
+  <defs>
+    <linearGradient id="a1og-ramp" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#07152F" />
+      <stop offset="30%" stop-color="#0045C8" />
+      <stop offset="65%" stop-color="#00B4C5" />
+      <stop offset="100%" stop-color="#2EE8D1" />
+    </linearGradient>
+    <radialGradient id="a1og-glow" cx="88%" cy="15%" r="55%">
+      <stop offset="0%" stop-color="#0045C8" stop-opacity="0.35" />
+      <stop offset="55%" stop-color="#00B4C5" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#07152F" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="a1og-pylon" width="54" height="31" patternUnits="userSpaceOnUse">
+      <path d="M0 31L27 0L54 31" fill="none" stroke="#94A3B8" stroke-width="0.6" stroke-opacity="0.35" />
+      <path d="M0 0L27 31L54 0" fill="none" stroke="#00B4C5" stroke-width="0.6" stroke-opacity="0.25" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#02071C" />
+  <rect width="1200" height="630" fill="url(#a1og-glow)" />
+  <rect x="820" y="0" width="380" height="630" fill="url(#a1og-pylon)" opacity="0.5" />
+
+  <text x="72" y="100" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="1.5" fill="#00B4C5">AI INFRANEXT | INDONESIA 2026</text>
+
+  <text font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="800" font-size="56" letter-spacing="-1.5" fill="#FFFFFF">
+    <tspan x="72" y="280">What Indonesia's</tspan>
+    <tspan x="72" y="348">2,000MW target</tspan>
+    <tspan x="72" y="416">actually requires</tspan>
+  </text>
+
+  <text x="72" y="470" font-family="Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="400" fill="#94A3B8">Analysis &#183; AI-ready data centres and digital infrastructure</text>
+
+  <path d="M0 600 Q 600 560 1200 600" fill="none" stroke="url(#a1og-ramp)" stroke-width="4" stroke-opacity="0.7" />
+</svg>

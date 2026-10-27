@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <path d="M12 28C15 16 26 12 36 18C30 20 22 25 18 36C15 35 13 32 12 28Z" fill="#78BE20"/>
+  <path d="M22 36C26 24 36 18 46 22C40 26 34 32 28 40C25 39 23 38 22 36Z" fill="#0085CA"/>
+  <text x="54" y="33" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-weight="800" font-size="25" letter-spacing="-0.5" fill="#002D62">maxis</text>
+</svg>

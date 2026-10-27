@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <path d="M10 12H18V38H10V12Z" fill="#ED1C24"/>
+  <path d="M22 12H30V38H22V12Z" fill="#005BA6"/>
+  <text x="38" y="34" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif" font-weight="900" font-size="28" letter-spacing="1" fill="#0F172A">MDEC</text>
+</svg>
