@@ -5,54 +5,111 @@ import { getAssetPath } from "@/lib/assets";
 
 export default function WhatThisIsSection() {
   return (
-    <section id="section-what-this-is" className="bg-[#02071C] text-white pt-16 pb-20 border-b border-white/10 relative overflow-hidden">
-      {/* Background Video & Scaffolding System */}
-      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden select-none" aria-hidden="true">
-        {/* Base dark midnight field */}
-        <div className="absolute inset-0 bg-[#02071C]"></div>
+    <section
+      id="section-what-this-is"
+      style={{
+        backgroundColor: "#02071C",
+        color: "#FFFFFF",
+        paddingTop: "64px",
+        paddingBottom: "80px",
+        borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      {/* Multi-Concept Background System (Concept 1: Blueprint, Concept 2: Interconnect, Concept 3: Horizon) */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          pointerEvents: "none",
+          zIndex: 0,
+          overflow: "hidden",
+          userSelect: "none",
+        }}
+        aria-hidden="true"
+      >
+        {/* 1. Base Dark Midnight Field (#02071C) */}
+        <div style={{ position: "absolute", inset: 0, backgroundColor: "#02071C" }}></div>
 
-        {/* Ambient Stage Video */}
-        <div className="absolute inset-0 overflow-hidden">
+        {/* 2. Ambient Executive Summit Stage Video */}
+        <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
           <video
             autoPlay
             loop
             muted
             playsInline
             poster={getAssetPath("/images/s4-video-poster.jpg")}
-            className="w-full h-full object-cover object-center opacity-40 scale-[1.02] filter contrast-[1.10] brightness-[0.85]"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+              opacity: 0.45,
+              transform: "scale(1.02)",
+              filter: "contrast(1.10) brightness(0.85)",
+            }}
           >
             <source src={getAssetPath("/videos/s4_ambient_stage.webm")} type="video/webm" />
             <source src={getAssetPath("/videos/s4_ambient_stage.mp4")} type="video/mp4" />
           </video>
         </div>
 
-        {/* High-Contrast Gradient Wash */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#02071C]/92 via-[#07152F]/82 to-[#02071C]/95"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_75%_50%_at_50%_35%,rgba(0,69,200,0.22)_0%,rgba(0,180,197,0.06)_50%,transparent_80%)]"></div>
-
-        {/* Subtle Vector Scaffolding Overlay */}
+        {/* 3. High-Contrast Legibility Gradient Wash */}
         <div
-          className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: "radial-gradient(rgba(0, 180, 197, 0.25) 1px, transparent 1px)",
-            backgroundSize: "32px 32px",
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(to bottom, rgba(2, 7, 28, 0.92), rgba(7, 21, 47, 0.82), rgba(2, 7, 28, 0.95))",
+          }}
+        ></div>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "radial-gradient(ellipse 75% 50% at 50% 35%, rgba(0, 69, 200, 0.22) 0%, rgba(0, 180, 197, 0.06) 50%, transparent 80%)",
           }}
         ></div>
 
-        {/* Bottom Horizon Arc */}
-        <div className="absolute bottom-0 inset-x-0 h-10 pointer-events-none z-10">
-          <svg className="w-full h-full" viewBox="0 0 1200 48" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 0 48 Q 600 8 1200 48" stroke="rgba(46, 232, 209, 0.4)" strokeWidth="1.5" />
+        {/* 4. Subtle Vector Scaffolding Overlay */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            opacity: 0.25,
+            maskImage: "radial-gradient(ellipse 85% 70% at 50% 45%, black 20%, transparent 95%)",
+            WebkitMaskImage: "radial-gradient(ellipse 85% 70% at 50% 45%, black 20%, transparent 95%)",
+          }}
+        >
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="s4-vid-grid" width="80" height="138.564" patternUnits="userSpaceOnUse">
+                <path d="M 0 0 L 80 138.564 M 80 0 L 0 138.564" fill="none" stroke="rgba(0, 180, 197, 0.25)" strokeWidth="0.5" />
+                <circle cx="40" cy="69.282" r="1.2" fill="#2EE8D1" opacity="0.8" />
+              </pattern>
+              <linearGradient id="brand-horizon-grad-v" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#07152F" stopOpacity="0" />
+                <stop offset="20%" stopColor="#0045C8" stopOpacity="0.6" />
+                <stop offset="50%" stopColor="#00B4C5" stopOpacity="0.9" />
+                <stop offset="80%" stopColor="#2EE8D1" stopOpacity="0.6" />
+                <stop offset="100%" stopColor="#07152F" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#s4-vid-grid)" />
+          </svg>
+        </div>
+
+        {/* 6. Orbital Compute Horizon */}
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "48px", pointerEvents: "none", zIndex: 10 }}>
+          <svg style={{ width: "100%", height: "100%" }} viewBox="0 0 1200 48" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0 48 Q 600 8 1200 48" stroke="url(#brand-horizon-grad-v)" strokeWidth="4" opacity="0.4" filter="blur(2px)" />
+            <path d="M 0 48 Q 600 8 1200 48" stroke="url(#brand-horizon-grad-v)" strokeWidth="1.5" />
           </svg>
         </div>
       </div>
 
-      <div className="container relative z-10">
+      <div className="container" style={{ position: "relative", zIndex: 10 }}>
         <div style={{ maxWidth: "800px", marginBottom: "40px" }}>
-          <div className="hud-badge" style={{ marginBottom: "16px" }}>
-            <span className="hud-badge-dot"></span>
-            Scope &amp; Positioning
-          </div>
           <h2 style={{ fontSize: "36px", fontWeight: 800, color: "#FFFFFF", lineHeight: 1.2, marginBottom: "16px", letterSpacing: "-0.02em" }}>
             Not an AI conference. Not a data centre show.
           </h2>
@@ -64,7 +121,7 @@ export default function WhatThisIsSection() {
           </p>
         </div>
 
-        {/* Institutional Triptych */}
+        {/* Institutional Triptych: Embedded Architectural Division */}
         <div
           id="s4-triptych-panel"
           style={{
@@ -79,7 +136,7 @@ export default function WhatThisIsSection() {
             position: "relative",
           }}
         >
-          {/* Top Sweeping Accent */}
+          {/* Top Sweeping Hairline Stage Light Accent */}
           <div
             style={{
               position: "absolute",
@@ -112,15 +169,21 @@ export default function WhatThisIsSection() {
                   </span>
                   <span style={{ width: "24px", height: "1px", background: "rgba(46, 232, 209, 0.4)" }}></span>
                 </div>
-                {/* 01: Optical Focal Aperture */}
-                <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="16" cy="16" r="11.5" stroke="#2EE8D1" strokeWidth="1.5" strokeDasharray="4 2" />
-                  <circle cx="16" cy="16" r="5" stroke="#00B4C5" strokeWidth="1.75" />
-                  <circle cx="16" cy="16" r="2" fill="#2EE8D1" />
-                  <line x1="16" y1="2" x2="16" y2="7.5" stroke="#2EE8D1" strokeWidth="1.5" strokeLinecap="round" />
-                  <line x1="16" y1="24.5" x2="16" y2="30" stroke="#2EE8D1" strokeWidth="1.5" strokeLinecap="round" />
-                  <line x1="2" y1="16" x2="7.5" y2="16" stroke="#2EE8D1" strokeWidth="1.5" strokeLinecap="round" />
-                  <line x1="24.5" y1="16" x2="30" y2="16" stroke="#2EE8D1" strokeWidth="1.5" strokeLinecap="round" />
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="grad-prop1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#2EE8D1"></stop>
+                      <stop offset="50%" stopColor="#00B4C5"></stop>
+                      <stop offset="100%" stopColor="#0045C8"></stop>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="16" cy="16" r="11.5" stroke="url(#grad-prop1)" strokeWidth="1.5" strokeDasharray="4 2"></circle>
+                  <circle cx="16" cy="16" r="5" stroke="url(#grad-prop1)" strokeWidth="1.75"></circle>
+                  <circle cx="16" cy="16" r="2" fill="#2EE8D1"></circle>
+                  <line x1="16" y1="2" x2="16" y2="7.5" stroke="url(#grad-prop1)" strokeWidth="1.5" strokeLinecap="round"></line>
+                  <line x1="16" y1="24.5" x2="16" y2="30" stroke="url(#grad-prop1)" strokeWidth="1.5" strokeLinecap="round"></line>
+                  <line x1="2" y1="16" x2="7.5" y2="16" stroke="url(#grad-prop1)" strokeWidth="1.5" strokeLinecap="round"></line>
+                  <line x1="24.5" y1="16" x2="30" y2="16" stroke="url(#grad-prop1)" strokeWidth="1.5" strokeLinecap="round"></line>
                 </svg>
               </div>
               <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#FFFFFF", marginBottom: "12px", lineHeight: 1.3 }}>
@@ -151,12 +214,18 @@ export default function WhatThisIsSection() {
                   </span>
                   <span style={{ width: "24px", height: "1px", background: "rgba(46, 232, 209, 0.4)" }}></span>
                 </div>
-                {/* 02: Multi-layer Architecture */}
-                <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16 4L27 9.5L16 15L5 9.5L16 4Z" stroke="#2EE8D1" strokeWidth="1.5" strokeLinejoin="round" />
-                  <path d="M5 15.5L16 21L27 15.5" stroke="#00B4C5" strokeWidth="1.5" strokeLinejoin="round" />
-                  <path d="M5 21.5L16 27L27 21.5" stroke="#0045C8" strokeWidth="1.5" strokeLinejoin="round" />
-                  <circle cx="16" cy="9.5" r="1.5" fill="#2EE8D1" />
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="grad-prop2" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#2EE8D1"></stop>
+                      <stop offset="50%" stopColor="#00B4C5"></stop>
+                      <stop offset="100%" stopColor="#0045C8"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path d="M16 4L27 9.5L16 15L5 9.5L16 4Z" stroke="url(#grad-prop2)" strokeWidth="1.5" strokeLinejoin="round"></path>
+                  <path d="M5 15.5L16 21L27 15.5" stroke="url(#grad-prop2)" strokeWidth="1.5" strokeLinejoin="round"></path>
+                  <path d="M5 21.5L16 27L27 21.5" stroke="url(#grad-prop2)" strokeWidth="1.5" strokeLinejoin="round"></path>
+                  <circle cx="16" cy="9.5" r="1.5" fill="#2EE8D1"></circle>
                 </svg>
               </div>
               <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#FFFFFF", marginBottom: "12px", lineHeight: 1.3 }}>
@@ -186,13 +255,19 @@ export default function WhatThisIsSection() {
                   </span>
                   <span style={{ width: "24px", height: "1px", background: "rgba(46, 232, 209, 0.4)" }}></span>
                 </div>
-                {/* 03: Strategic Radar Crosshair */}
-                <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="5" y="5" width="22" height="22" rx="4" stroke="#2EE8D1" strokeWidth="1.5" />
-                  <line x1="16" y1="8" x2="16" y2="24" stroke="#00B4C5" strokeWidth="1" strokeDasharray="2 2" />
-                  <line x1="8" y1="16" x2="24" y2="16" stroke="#00B4C5" strokeWidth="1" strokeDasharray="2 2" />
-                  <circle cx="16" cy="16" r="4" stroke="#2EE8D1" strokeWidth="1.5" />
-                  <circle cx="16" cy="16" r="1.5" fill="#2EE8D1" />
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="grad-prop3" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#2EE8D1"></stop>
+                      <stop offset="50%" stopColor="#00B4C5"></stop>
+                      <stop offset="100%" stopColor="#0045C8"></stop>
+                    </linearGradient>
+                  </defs>
+                  <rect x="5" y="5" width="22" height="22" rx="4" stroke="url(#grad-prop3)" strokeWidth="1.5"></rect>
+                  <line x1="16" y1="8" x2="16" y2="24" stroke="url(#grad-prop3)" strokeWidth="1" strokeDasharray="2 2"></line>
+                  <line x1="8" y1="16" x2="24" y2="16" stroke="url(#grad-prop3)" strokeWidth="1" strokeDasharray="2 2"></line>
+                  <circle cx="16" cy="16" r="4" stroke="#2EE8D1" strokeWidth="1.5"></circle>
+                  <circle cx="16" cy="16" r="1.5" fill="#2EE8D1"></circle>
                 </svg>
               </div>
               <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#FFFFFF", marginBottom: "12px", lineHeight: 1.3 }}>
@@ -203,6 +278,24 @@ export default function WhatThisIsSection() {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Architectural Spine Transition into S5 (Positioning → What Decisions) */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            marginTop: "40px",
+            marginBottom: "-40px",
+            position: "relative",
+            zIndex: 10,
+          }}
+          aria-hidden="true"
+        >
+          <div style={{ width: "1px", height: "48px", background: "rgba(0, 180, 197, 0.4)" }}></div>
+          <div style={{ width: "10px", height: "10px", borderRadius: "50%", border: "2px solid var(--aqua)", backgroundColor: "#02071C", boxShadow: "0 0 8px var(--aqua)" }}></div>
         </div>
       </div>
     </section>

@@ -3113,3 +3113,9 @@ form[class*="hs-form-"] {
     color: var(--aqua);
   }
 
+
+.market-reality-frame .stat-number, .market-reality-frame .telemetry-stat-number {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  text-shadow: 0 0 15px rgba(0, 180, 197, 0.4) !important;
+}
