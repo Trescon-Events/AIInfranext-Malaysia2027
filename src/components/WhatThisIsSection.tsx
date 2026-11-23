@@ -1,9 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { getAssetPath } from "@/lib/assets";
 
 export default function WhatThisIsSection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {});
+    }
+  }, []);
+
   return (
     <section
       id="section-what-this-is"
@@ -32,9 +42,10 @@ export default function WhatThisIsSection() {
         {/* 1. Base Dark Midnight Field (#02071C) */}
         <div style={{ position: "absolute", inset: 0, backgroundColor: "#02071C" }}></div>
 
-        {/* 2. Ambient Executive Summit Stage Video */}
+        {/* 2. Ambient Executive Summit Stage Video (Vivid & Highly Visible) */}
         <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
           <video
+            ref={videoRef}
             autoPlay
             loop
             muted
@@ -45,29 +56,29 @@ export default function WhatThisIsSection() {
               height: "100%",
               objectFit: "cover",
               objectPosition: "center",
-              opacity: 0.45,
+              opacity: 0.85,
               transform: "scale(1.02)",
-              filter: "contrast(1.10) brightness(0.85)",
+              filter: "contrast(1.08) brightness(1.02)",
             }}
           >
-            <source src={getAssetPath("/videos/s4_ambient_stage.webm")} type="video/webm" />
             <source src={getAssetPath("/videos/s4_ambient_stage.mp4")} type="video/mp4" />
+            <source src={getAssetPath("/videos/s4_ambient_stage.webm")} type="video/webm" />
           </video>
         </div>
 
-        {/* 3. High-Contrast Legibility Gradient Wash */}
+        {/* 3. Subtle Atmospheric Wash (Light shading to preserve video clarity while ensuring readability) */}
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(to bottom, rgba(2, 7, 28, 0.92), rgba(7, 21, 47, 0.82), rgba(2, 7, 28, 0.95))",
+            background: "linear-gradient(to bottom, rgba(2, 7, 28, 0.55) 0%, rgba(2, 7, 28, 0.20) 35%, rgba(2, 7, 28, 0.30) 70%, rgba(2, 7, 28, 0.75) 100%)",
           }}
         ></div>
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background: "radial-gradient(ellipse 75% 50% at 50% 35%, rgba(0, 69, 200, 0.22) 0%, rgba(0, 180, 197, 0.06) 50%, transparent 80%)",
+            background: "radial-gradient(ellipse 75% 50% at 50% 35%, rgba(0, 69, 200, 0.15) 0%, rgba(0, 180, 197, 0.04) 50%, transparent 80%)",
           }}
         ></div>
 
@@ -76,7 +87,7 @@ export default function WhatThisIsSection() {
           style={{
             position: "absolute",
             inset: 0,
-            opacity: 0.25,
+            opacity: 0.2,
             maskImage: "radial-gradient(ellipse 85% 70% at 50% 45%, black 20%, transparent 95%)",
             WebkitMaskImage: "radial-gradient(ellipse 85% 70% at 50% 45%, black 20%, transparent 95%)",
           }}
@@ -110,13 +121,13 @@ export default function WhatThisIsSection() {
 
       <div className="container" style={{ position: "relative", zIndex: 10 }}>
         <div style={{ maxWidth: "800px", marginBottom: "40px" }}>
-          <h2 style={{ fontSize: "36px", fontWeight: 800, color: "#FFFFFF", lineHeight: 1.2, marginBottom: "16px", letterSpacing: "-0.02em" }}>
+          <h2 style={{ fontSize: "36px", fontWeight: 800, color: "#FFFFFF", lineHeight: 1.2, marginBottom: "16px", letterSpacing: "-0.02em", textShadow: "0 2px 14px rgba(2, 7, 28, 0.9)" }}>
             Not an AI conference. Not a data centre show.
           </h2>
-          <p style={{ fontSize: "18px", color: "#C9DCEC", lineHeight: 1.6, marginBottom: "8px" }}>
+          <p style={{ fontSize: "18px", color: "#E2E8F0", lineHeight: 1.6, marginBottom: "8px", textShadow: "0 2px 10px rgba(2, 7, 28, 0.85)" }}>
             It&apos;s the executive summit for the infrastructure decisions that turn AI ambition into production.
           </p>
-          <p style={{ fontSize: "16px", color: "var(--aqua)", fontFamily: "var(--mono)", fontWeight: 600 }}>
+          <p style={{ fontSize: "16px", color: "var(--aqua)", fontFamily: "var(--mono)", fontWeight: 600, textShadow: "0 2px 10px rgba(2, 7, 28, 0.85)" }}>
             Compute. Cloud. Data centres. Power. Connectivity. Security.
           </p>
         </div>
