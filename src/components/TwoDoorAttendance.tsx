@@ -9,12 +9,12 @@ export default function TwoDoorAttendance() {
         <div>
           <span className="door-pill door-pill-cyan">By invitation &amp; application</span>
           <div className="door-price" style={{ color: "var(--aqua)" }}>Complimentary</div>
-          <h3>Delegate Pass</h3>
+          <h3>Delegate Pass (Complimentary by Invitation)</h3>
           <p className="door-desc">
-            Senior enterprise, government and selected infrastructure-investor delegates attend by invitation, subject to qualification based on seniority and an active infrastructure mandate.
+            Reserved for enterprise and government leaders with active deployment, cloud, or infrastructure budgets.
           </p>
         </div>
-        <Link href="/apply/" className="btn btn-primary" style={{ alignSelf: "flex-start" }}>
+        <Link href="/apply/" className="btn btn-primary" style={{ alignSelf: "flex-start", marginTop: "20px" }}>
           Apply for a Delegate Pass →
         </Link>
       </div>
@@ -24,12 +24,12 @@ export default function TwoDoorAttendance() {
         <div>
           <span className="door-pill door-pill-blue">Commercial access</span>
           <div className="door-price">USD 499</div>
-          <h3>Business Pass</h3>
+          <h3>Business Pass (USD 499)</h3>
           <p className="door-desc">
-            Paid access for technology vendors, service providers and consultancies, and for enterprise or public-sector professionals outside the invitation criteria. Availability is controlled.
+            Controlled access for solution providers, consultancies, and technology vendors looking to engage key buyers.
           </p>
         </div>
-        <Link href="/business-pass/" className="btn btn-outline" style={{ alignSelf: "flex-start" }}>
+        <Link href="/business-pass/" className="btn btn-outline" style={{ alignSelf: "flex-start", marginTop: "20px" }}>
           Buy a Business Pass →
         </Link>
       </div>

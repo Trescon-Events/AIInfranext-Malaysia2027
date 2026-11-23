@@ -57,7 +57,7 @@ export default function SponsorPage() {
             </div>
 
             <div className="stat-grid" style={{ boxShadow: "none", marginTop: "32px" }}>
-              <div className="stat-card"><div className="stat-number">800+</div><div className="stat-label">Delegates</div></div>
+              <div className="stat-card"><div className="stat-number">500+</div><div className="stat-label">Delegates</div></div>
               <div className="stat-card"><div className="stat-number">40+</div><div className="stat-label">Speakers</div></div>
               <div className="stat-card"><div className="stat-number">2</div><div className="stat-label">Days</div></div>
               <div className="stat-card"><div className="stat-number">4</div><div className="stat-label">Pillars</div></div>
@@ -132,7 +132,7 @@ export default function SponsorPage() {
               <div style={{ background: "var(--paper)", border: "1px solid var(--line)", borderTop: "3px solid var(--grey)", borderRadius: "var(--radius)", padding: "24px" }}>
                 <h3 style={{ fontSize: "18px", color: "var(--navy)", marginBottom: "6px" }}>Exhibitor</h3>
                 <p style={{ fontSize: "13.5px", color: "var(--grey)", margin: 0 }}>
-                  Branded exhibition space on the floor connecting you directly with 800+ enterprise decision-makers.
+                  Branded exhibition space on the floor connecting you directly with 500+ enterprise decision-makers.
                 </p>
               </div>
             </div>

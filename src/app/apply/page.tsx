@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FormCard from "@/components/FormCard";
@@ -23,6 +24,17 @@ export default function ApplyPage() {
             <p style={{ fontSize: "16px", color: "#C9DCEC", lineHeight: 1.6 }}>
               Delegate places are reviewed by the steering committee and confirmed on the strength of your role and infrastructure mandate. Complete the application below and we will follow up within two working days.
             </p>
+
+            <div style={{ background: "rgba(0,180,197,0.1)", borderLeft: "4px solid var(--cyan)", padding: "16px 20px", borderRadius: "0 6px 6px 0", marginTop: "20px" }}>
+              <div style={{ fontFamily: "var(--mono)", fontSize: "12px", fontWeight: 700, color: "var(--aqua)", textTransform: "uppercase", marginBottom: "4px" }}>
+                Built for High-Level Collaboration, Not Crowds
+              </div>
+              <p style={{ fontSize: "14px", color: "#FFFFFF", margin: 0, lineHeight: 1.5 }}>
+                AI InfraNext is intentionally capped to bring together genuine decision-makers across enterprise AI, utilities, and digital infrastructure.<br />
+                <strong>Delegate Pass (Complimentary by Invitation):</strong> Reserved for enterprise and government leaders with active deployment, cloud, or infrastructure budgets.<br />
+                <strong>Business Pass (USD 499):</strong> Controlled access for solution providers, consultancies, and technology vendors looking to engage key buyers. (<Link href="/business-pass/" style={{ color: "var(--aqua)", textDecoration: "underline" }}>Buy a Business Pass here →</Link>)
+              </p>
+            </div>
           </div>
         </section>
 

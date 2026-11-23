@@ -2789,3 +2789,327 @@ form[class*="hs-form-"] {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+/* Market Reality Telemetry Styles */
+
+  
+
+  
+
+  /* Main Container Frame */
+  .market-reality-frame {
+    width: 100%;
+    max-width: 1140px;
+    background: radial-gradient(circle at 100% 0%, rgba(0, 180, 197, 0.12), transparent 45%),
+                radial-gradient(circle at 0% 100%, rgba(0, 69, 200, 0.18), transparent 50%),
+                #03091E;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 69, 200, 0.15);
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    position: relative;
+  }
+
+  @media (max-width: 900px) {
+    .market-reality-frame {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* LEFT HERO COLUMN */
+  .hero-panel {
+    position: relative;
+    padding: 44px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(2, 7, 28, 0.85) 0%, rgba(7, 21, 47, 0.4) 100%),
+                url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    border-right: 1px solid var(--border-color);
+  }
+
+  /* Animated Overlay Glowing Lines */
+  .hero-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(46, 232, 209, 0.08) 50%,
+      transparent 100%
+    );
+    animation: sweep 6s infinite linear;
+    pointer-events: none;
+  }
+
+  @keyframes sweep {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50%); }
+  }
+
+  .hud-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--aqua);
+    background: rgba(46, 232, 209, 0.08);
+    border: 1px solid rgba(46, 232, 209, 0.35);
+    padding: 6px 14px;
+    border-radius: 4px;
+    width: fit-content;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+
+  .hud-badge-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--aqua);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--aqua);
+    animation: blink 1.8s infinite ease-in-out;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(0.8); }
+  }
+
+  .hero-headline {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .hero-headline span {
+    color: var(--cyan);
+    text-shadow: 0 0 20px rgba(0, 180, 197, 0.4);
+  }
+
+  .hero-subhead {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #E2E8F0;
+    max-width: 440px;
+    margin-bottom: 36px;
+  }
+
+  .hero-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 11px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .hero-footer strong {
+    color: var(--aqua);
+  }
+
+  /* RIGHT TELEMETRY COLUMN */
+  .telemetry-panel {
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    background: rgba(3, 9, 30, 0.85);
+  }
+
+  /* Stat Cards */
+  .stat-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 22px 24px;
+    position: relative;
+    backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(46, 232, 209, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 69, 200, 0.25);
+  }
+
+  /* Decorative HUD corner brackets */
+  .stat-card::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid var(--aqua);
+    border-right: 2px solid var(--aqua);
+  }
+
+  .stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .stat-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+  }
+
+  .stat-tag {
+    font-size: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--aqua);
+    background: rgba(46, 232, 209, 0.1);
+    padding: 2px 8px;
+    border-radius: 3px;
+  }
+
+  .stat-val-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .stat-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--text-white);
+    letter-spacing: -0.02em;
+    background: linear-gradient(180deg, #FFFFFF 30%, #A5F3FC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .stat-sub-badge {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--aqua);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .stat-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
+  /* Live Gauge Container */
+  .gauge-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 22px 24px;
+    position: relative;
+    backdrop-filter: blur(12px);
+  }
+
+  .gauge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 14px;
+  }
+
+  .gauge-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-white);
+  }
+
+  .gauge-source {
+    font-size: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-muted);
+  }
+
+  .gauge-metrics {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .metric-active {
+    color: var(--aqua);
+    font-weight: 700;
+  }
+
+  .metric-pipe {
+    color: #64748B;
+  }
+
+  /* Bar Progress Visual */
+  .gauge-track {
+    height: 16px;
+    background: #08152B;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  .gauge-fill-active {
+    width: 18.8%;
+    background: linear-gradient(90deg, var(--cobalt), var(--aqua));
+    box-shadow: 0 0 15px rgba(46, 232, 209, 0.7);
+    position: relative;
+    animation: pulseGlow 2.5s infinite ease-in-out;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.3); }
+  }
+
+  .gauge-fill-gap {
+    width: 81.2%;
+    background: repeating-linear-gradient(
+      -45deg,
+      #0c1930,
+      #0c1930 6px,
+      #132442 6px,
+      #132442 12px
+    );
+  }
+
+  .gauge-footer {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+
+  .gauge-footer strong {
+    color: var(--aqua);
+  }
+

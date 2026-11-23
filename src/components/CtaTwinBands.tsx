@@ -7,7 +7,7 @@ export default function CtaTwinBands() {
       <div className="cta-band cta-band-primary stage-spotlight">
         <div className="container cta-band-inner">
           <div className="cta-band-text">
-            <div className="cta-band-meta">Kuala Lumpur · 20–21 July 2027 · 800+ delegates · 40+ speakers</div>
+            <div className="cta-band-meta">Kuala Lumpur · 20–21 July 2027 · 500+ delegates · 40+ speakers</div>
             <h2 className="cta-band-h2">Be in the room where Malaysia&apos;s AI infrastructure meets enterprise demand</h2>
           </div>
           <Link href="/apply/" className="btn btn-primary" style={{ flexShrink: 0 }}>
@@ -20,7 +20,7 @@ export default function CtaTwinBands() {
         <div className="container cta-band-inner">
           <div className="cta-band-text">
             <div className="cta-band-meta" style={{ color: "var(--cyan)" }}>4 pillars · 5 buyer groups · 2 days</div>
-            <h2 className="cta-band-h2">Put your infrastructure solutions in front of the executives specifying</h2>
+            <h2 className="cta-band-h2">Put your organisation in front of the people deciding what gets built, bought and deployed</h2>
           </div>
           <Link href="/sponsor-enquiry/" className="btn btn-outline-white" style={{ flexShrink: 0 }}>
             Enquire about sponsorship →

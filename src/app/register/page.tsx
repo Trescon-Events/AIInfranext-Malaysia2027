@@ -5,8 +5,8 @@ import TwoDoorAttendance from "@/components/TwoDoorAttendance";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Attend",
-  description: "Two ways into the room. Apply for a complimentary Delegate Pass or purchase a Business Pass for AI InfraNext | Malaysia 2027.",
+  title: "Attend | AI InfraNext Malaysia 2027",
+  description: "Built for High-Level Collaboration, Not Crowds. AI InfraNext is intentionally capped to bring together genuine decision-makers across enterprise AI, utilities, and digital infrastructure.",
 };
 
 export default function RegisterPage() {
@@ -17,10 +17,10 @@ export default function RegisterPage() {
       <main>
         <section className="section section-dark" style={{ padding: "72px 0" }}>
           <div className="container">
-            <div className="eyebrow">Attend</div>
-            <h1 style={{ color: "#FFFFFF", marginBottom: "16px" }}>Two ways into the room</h1>
+            <div className="eyebrow" style={{ color: "var(--aqua)" }}>Attend · Registration</div>
+            <h1 style={{ color: "#FFFFFF", marginBottom: "16px" }}>Built for High-Level Collaboration, Not Crowds</h1>
             <p style={{ fontSize: "18px", color: "#C9DCEC", maxWidth: "76ch", lineHeight: 1.6 }}>
-              Senior enterprise, government and infrastructure-investor leaders attend on a complimentary Delegate Pass by invitation and application. Business Passes are available to purchase.
+              AI InfraNext is intentionally capped to bring together genuine decision-makers across enterprise AI, utilities, and digital infrastructure.
             </p>
           </div>
         </section>

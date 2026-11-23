@@ -44,7 +44,7 @@ export default function CxoBoardroomPage() {
               This is where technical objections are addressed, where enterprise buying committees meet your engineering and executive leaders, and where target accounts turn into active procurement engagements.
             </p>
             <p style={{ fontSize: "16px", maxWidth: "76ch", color: "var(--grey)" }}>
-              Our strongest partners take both: the main stage establishes category authority across 800+ delegates, while the boardroom converts that authority into fifteen direct conversations with priority accounts.
+              Our strongest partners take both: the main stage establishes category authority across 500+ delegates, while the boardroom converts that authority into fifteen direct conversations with priority accounts.
             </p>
           </div>
         </section>

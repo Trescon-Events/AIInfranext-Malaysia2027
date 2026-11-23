@@ -24,7 +24,7 @@ export default function ExhibitPage() {
               Entry-level investment.
             </h1>
             <p style={{ fontSize: "18px", color: "#C9DCEC", maxWidth: "76ch", lineHeight: 1.6, marginBottom: "28px" }}>
-              800+ senior enterprise, government and infrastructure decision-makers across two days in Kuala Lumpur, with a branded presence on the showcase floor and visibility across summit channels.
+              500+ senior enterprise, government and infrastructure decision-makers across two days in Kuala Lumpur, with a branded presence on the showcase floor and visibility across summit channels.
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: "16px", flexWrap: "wrap" }}>
               <a href="#exhibit-form" className="btn btn-primary">
@@ -39,11 +39,11 @@ export default function ExhibitPage() {
           <div className="container">
             <h2>The people you came for</h2>
             <p style={{ fontSize: "16px", maxWidth: "76ch" }}>
-              The delegate base does not change with the tier. For entry-level exhibitors, direct access to the same 800+ senior decision-makers is the primary conversion driver.
+              The delegate base does not change with the tier. For entry-level exhibitors, direct access to the same 500+ senior decision-makers is the primary conversion driver.
             </p>
 
             <div className="stat-grid" style={{ boxShadow: "none", margin: "28px 0" }}>
-              <div className="stat-card"><div className="stat-number">800+</div><div className="stat-label">Enterprise Delegates</div></div>
+              <div className="stat-card"><div className="stat-number">500+</div><div className="stat-label">Enterprise Delegates</div></div>
               <div className="stat-card"><div className="stat-number">40+</div><div className="stat-label">Keynote &amp; Panel Speakers</div></div>
               <div className="stat-card"><div className="stat-number">2</div><div className="stat-label">Full Exhibition Days</div></div>
               <div className="stat-card"><div className="stat-number">5</div><div className="stat-label">Buyer Constituencies</div></div>

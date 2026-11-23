@@ -47,7 +47,7 @@ export default function InvitationPage() {
               You have been invited to AI InfraNext | Malaysia 2027
             </h1>
             <p style={{ fontSize: "18px", color: "#C9DCEC", maxWidth: "76ch", lineHeight: 1.6, marginBottom: "28px" }}>
-              A two-day executive summit connecting enterprise AI workload demand with the infrastructure required for production AI. 800+ senior enterprise, government and infrastructure leaders convened in Kuala Lumpur.
+              A two-day executive summit connecting enterprise AI workload demand with the infrastructure required for production AI. 500+ senior enterprise, government and infrastructure leaders convened in Kuala Lumpur.
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: "16px", flexWrap: "wrap" }}>
               <a href="#confirm-section" className="btn btn-primary">

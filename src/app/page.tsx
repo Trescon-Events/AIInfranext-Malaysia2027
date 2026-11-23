@@ -4,8 +4,9 @@ import { getAssetPath } from "@/lib/assets";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StatRow from "@/components/StatRow";
-import DataCards from "@/components/DataCards";
-import PillarCards from "@/components/PillarCards";
+import MarketRealityTelemetry from "@/components/MarketRealityTelemetry";
+import WhatThisIsSection from "@/components/WhatThisIsSection";
+import VirtualStageExperience from "@/components/VirtualStageExperience";
 import ConstituencyStack from "@/components/ConstituencyStack";
 import TwoDoorAttendance from "@/components/TwoDoorAttendance";
 import SpeakerCarousel from "@/components/SpeakerCarousel";
@@ -154,147 +155,67 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* S2 · Stat Strip */}
+        {/* S2 · Stat Strip (Updated to 500+ Delegates, 40+ Speakers, 4 Content Pillars, 2 Days) */}
         <StatRow overlap={true} />
 
-        {/* S3 · The Argument */}
+        {/* S3 · Market Reality Telemetry HUD Frame */}
+        <section className="section section-wash" style={{ padding: "48px 0" }}>
+          <div className="container">
+            <MarketRealityTelemetry />
+          </div>
+        </section>
+
+        {/* S4 · What this is (With Ambient Stage Video Background & 3-Column Institutional Triptych) */}
+        <WhatThisIsSection />
+
+        {/* S5 · The four pillars (Theatrical Stage Presentation from AI Infra Indonesia) */}
+        <section className="section section-dark" style={{ padding: "64px 0" }}>
+          <div className="container">
+            <VirtualStageExperience />
+          </div>
+        </section>
+
+        {/* S6 · Stage Faculty / Speakers (Placed directly after the Agenda / Pillars as instructed) */}
         <section className="section section-wash">
           <div className="container">
-            <div className="eyebrow">Why now</div>
-            <h2>
-              Malaysia has secured immense infrastructure commitments.<br />
-              The challenge now is turning capacity into enterprise value.
-            </h2>
-            <p>
-              With RM184.7 billion (US$91.8B equivalent) approved in data-centre-related investments since 2021 and 44% of 1H 2026 investment approvals concentrated in cloud and data centres, Malaysia&apos;s infrastructure build-out is moving fast. The decisions that matter now are practical: which workloads will run, how enterprises access compute, how power grids adapt, and how infrastructure investments become commercially viable.
-            </p>
+            <div className="eyebrow">Track record</div>
+            <h2>Previously on our stages</h2>
+            <p style={{ marginBottom: "28px" }}>Leaders who have taken the stage across Trescon&apos;s summit series in Malaysia.</p>
 
-            <DataCards />
+            <SpeakerCarousel />
 
-            {/* Asset — Data Visualisation Component */}
-            <div className="data-viz-box">
-              <div className="data-viz-header">
-                <div className="eyebrow" style={{ color: "var(--aqua)" }}>Market Infrastructure Metric</div>
-                <h3 style={{ color: "#FFFFFF", marginBottom: "6px" }}>Malaysian Utility Load &amp; Capital Pipeline</h3>
-                <p style={{ color: "#C9DCEC", fontSize: "13.5px", margin: 0 }}>
-                  Comparison of live connected utilisation against contracted pipeline capacity and 1H 2026 digital infrastructure approvals.
-                </p>
-              </div>
-
-              <div className="data-viz-bars">
-                <div className="bar-row">
-                  <div className="bar-labels">
-                    <span>Actual Data Centre Load Utilisation (Year-End 2025)</span>
-                    <span style={{ color: "var(--cyan)" }}>850MW</span>
-                  </div>
-                  <div className="bar-track">
-                    <div className="bar-fill bar-fill-actual">850MW (18.8%)</div>
-                  </div>
-                  <div className="bar-source-note">Status: Actual operational utilisation · Source: TNB Integrated Annual Report, 2025</div>
-                </div>
-
-                <div className="bar-row">
-                  <div className="bar-labels">
-                    <span>Connected Maximum Demand Pipeline (35 Projects)</span>
-                    <span style={{ color: "var(--aqua)" }}>4,500MW (4.5GW)</span>
-                  </div>
-                  <div className="bar-track">
-                    <div className="bar-fill bar-fill-pipeline">4.5GW Contracted Pipeline</div>
-                  </div>
-                  <div className="bar-source-note">Status: Contracted pipeline · Source: TNB Integrated Annual Report, 2025</div>
-                </div>
-              </div>
-            </div>
-
-            <div style={{ background: "var(--paper)", borderLeft: "4px solid var(--cobalt)", padding: "20px 24px", borderRadius: "0 6px 6px 0", marginTop: "28px" }}>
-              <p style={{ fontSize: "17px", fontWeight: 600, color: "var(--navy)", margin: 0 }}>
-                The next phase of Malaysia&apos;s infrastructure story is not about announcing gigawatts. It is about connecting capacity to production AI.
-              </p>
+            <div style={{ marginTop: "32px", textAlign: "center" }}>
+              <Link href="/speakers/" className="btn btn-outline" style={{ marginRight: "12px" }}>
+                View all speakers →
+              </Link>
+              <Link href="/speak/" className="btn btn-primary">
+                Apply to speak →
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* S4 · What this is */}
+        {/* S7 · Who is in the room ("Five groups. One shared build.") */}
         <section className="section section-light">
           <div className="container">
-            <h2>Not an AI awareness conference. Not a data centre supply show.</h2>
-            <p style={{ marginBottom: "32px" }}>
-              AI InfraNext sits directly at the intersection: connecting the enterprise workloads creating demand with the infrastructure required to put AI into production.
-            </p>
-
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "24px" }}>
-              <div style={{ background: "var(--wash)", border: "1px solid var(--line)", borderRadius: "var(--radius)", padding: "28px" }}>
-                <h3 style={{ fontSize: "18px", color: "var(--navy)", marginBottom: "12px" }}>Narrower than an enterprise AI summit</h3>
-                <p style={{ fontSize: "14px", color: "var(--ink)", margin: 0 }}>
-                  The question is not whether to adopt AI. It is what compute, networking, power, data architecture and security must exist beneath it.
-                </p>
-              </div>
-
-              <div style={{ background: "var(--wash)", border: "1px solid var(--line)", borderRadius: "var(--radius)", padding: "28px" }}>
-                <h3 style={{ fontSize: "18px", color: "var(--navy)", marginBottom: "12px" }}>Broader than a data centre event</h3>
-                <p style={{ fontSize: "14px", color: "var(--ink)", margin: 0 }}>
-                  Data centre capacity, power and cooling matter here because enterprise AI workloads depend on them, not as isolated real estate assets.
-                </p>
-              </div>
-
-              <div style={{ background: "var(--wash)", border: "1px solid var(--line)", borderRadius: "var(--radius)", padding: "28px" }}>
-                <h3 style={{ fontSize: "18px", color: "var(--navy)", marginBottom: "12px" }}>Built around Malaysian execution</h3>
-                <p style={{ fontSize: "14px", color: "var(--ink)", margin: 0 }}>
-                  Anchored in Malaysia&apos;s National AI Action Plan 2026–2030, domestic cloud regions, semiconductor engineering depth and enterprise production builds.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* S5 · The four pillars */}
-        <section className="section section-wash">
-          <div className="container">
-            <div className="eyebrow">Programme</div>
-            <h2>Four decisions. Two days.</h2>
-            <p>Each pillar tackles an essential architectural decision required to bring AI into enterprise production.</p>
-
-            <PillarCards />
-
-            <p style={{ fontFamily: "var(--mono)", fontSize: "13px", color: "var(--grey)", marginTop: "16px" }}>
-              Capital, policy, sustainability, infrastructure economics and talent run across all four.
-            </p>
-          </div>
-        </section>
-
-        {/* S6 · Who is in the room */}
-        <section className="section section-light">
-          <div className="container">
-            <h2>Five groups. Each one is here for the other four.</h2>
+            <h2>Five groups. One shared build.</h2>
             <p>The summit convenes the interlocking ecosystem that decides, operates and funds production AI infrastructure in Malaysia.</p>
 
             <ConstituencyStack />
           </div>
         </section>
 
-        {/* S7 · How to attend — two doors */}
+        {/* S8 · How to attend ("Built for High-Level Collaboration, Not Crowds") */}
         <section className="section section-wash">
           <div className="container">
-            <h2>Two ways in. Deliberately.</h2>
-            <p>Access is structured around professional qualification and role mandate to preserve executive quality on the floor.</p>
+            <h2>Built for High-Level Collaboration, Not Crowds</h2>
+            <p>AI InfraNext is intentionally capped to bring together genuine decision-makers across enterprise AI, utilities, and digital infrastructure.</p>
 
             <TwoDoorAttendance />
           </div>
         </section>
 
-        {/* S8 · Sponsor band */}
-        <section className="section section-dark">
-          <div className="container">
-            <div className="eyebrow">Sponsorship</div>
-            <h2>Position your infrastructure in front of enterprise workload owners</h2>
-            <p style={{ maxWidth: "72ch", marginBottom: "28px" }}>
-              Sponsors are not buying crowd volume. They are buying authority on the agenda, access to qualified enterprise buyers specifying compute and cloud, and structured engagement with the organisations scaling AI in Malaysia.
-            </p>
-            <Link href="/sponsor/" className="btn btn-primary">
-              Explore sponsorship →
-            </Link>
-          </div>
-        </section>
+        {/* Note: Standalone old S8 Sponsor Band removed as requested */}
 
         {/* S9a · Credibility */}
         <section className="section section-wash">
@@ -339,17 +260,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* S9c · Previously on our stages */}
-        <section className="section section-wash">
-          <div className="container">
-            <div className="eyebrow">Track record</div>
-            <h2>Previously on our stages</h2>
-            <p style={{ marginBottom: "28px" }}>Leaders who have taken the stage across Trescon&apos;s summit series in Malaysia.</p>
-
-            <SpeakerCarousel />
-          </div>
-        </section>
-
         {/* S10 · Twin closing CTA bands */}
         <CtaTwinBands />
 
@@ -378,26 +288,26 @@ export default function HomePage() {
 
             <form style={{ display: "flex", flexWrap: "wrap", gap: "12px", maxWidth: "600px", marginBottom: "20px" }}>
               <input type="email" className="form-control" placeholder="Work email" required style={{ flex: 1, minWidth: "240px" }} />
-              <button type="submit" className="btn btn-primary">Subscribe</button>
+              <button type="submit" className="btn btn-primary">
+                Subscribe
+              </button>
             </form>
-
-            <div style={{ fontSize: "13.5px", color: "var(--grey)" }}>
-              <a href="https://linkedin.com/showcase/ai-infranext" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600, color: "var(--cobalt)", display: "inline-flex", alignItems: "center", gap: "6px" }}>
-                Follow AI InfraNext on LinkedIn
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-              </a>
+            <div style={{ fontSize: "12px", color: "var(--grey)" }}>
+              No marketing noise. Unsubscribe at any time. Read our{" "}
+              <Link href="/privacy/" style={{ color: "var(--cobalt)", textDecoration: "underline" }}>
+                privacy policy
+              </Link>
+              .
             </div>
           </div>
         </section>
 
         {/* S13 · FAQ */}
-        <section className="section section-wash">
+        <section className="section section-wash" id="faq">
           <div className="container">
             <div className="eyebrow">FAQ</div>
             <h2>Frequently asked questions</h2>
-            <p style={{ marginBottom: "28px" }}>Direct answers to core questions regarding participation, qualification and the programme.</p>
+            <p style={{ marginBottom: "32px" }}>Direct answers on participation, programme scope and qualifications.</p>
 
             <FaqAccordion />
           </div>

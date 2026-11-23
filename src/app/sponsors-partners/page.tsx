@@ -78,7 +78,7 @@ export default function SponsorsPartnersPage() {
               <div style={{ background: "var(--paper)", border: "1px solid var(--line)", borderTop: "4px solid var(--grey)", padding: "24px", borderRadius: "var(--radius)" }}>
                 <div className="eyebrow eyebrow-dark" style={{ marginBottom: "6px" }}>Exhibition</div>
                 <h3 style={{ fontSize: "18px", color: "var(--navy)", marginBottom: "8px" }}>Exhibitors</h3>
-                <p style={{ fontSize: "13.5px", color: "var(--grey)", margin: 0 }}>Direct floor presence connecting hardware, software and services to 800+ delegates.</p>
+                <p style={{ fontSize: "13.5px", color: "var(--grey)", margin: 0 }}>Direct floor presence connecting hardware, software and services to 500+ delegates.</p>
               </div>
             </div>
           </div>
