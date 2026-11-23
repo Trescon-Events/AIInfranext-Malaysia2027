@@ -2887,12 +2887,13 @@ form[class*="hs-form-"] {
   }
 
   .hero-headline {
+    letter-spacing: -.02em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
     font-size: 32px;
     font-weight: 900;
     line-height: 1.15;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    margin-bottom: 18px;
+    color: #fff;
   }
 
   .hero-headline span {

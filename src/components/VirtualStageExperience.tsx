@@ -160,16 +160,14 @@ export default function VirtualStageExperience() {
             alignItems: "start",
           }}
         >
-          {/* Stage Pillar Selectors (Left Column) */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }} role="tablist">
+          {/* Stage Pillar Selectors (Left Column) - Changes strictly on hover, not clickable */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {pillars.map((pillar, idx) => {
               const isCurrent = activeIdx === idx;
               return (
-                <button
+                <div
                   key={idx}
-                  type="button"
-                  role="tab"
-                  aria-selected={isCurrent}
+                  onMouseEnter={() => setActiveIdx(idx)}
                   onClick={() => setActiveIdx(idx)}
                   style={{
                     textAlign: "left",
@@ -180,7 +178,8 @@ export default function VirtualStageExperience() {
                     color: isCurrent ? "#FFFFFF" : "#94A3B8",
                     position: "relative",
                     overflow: "hidden",
-                    cursor: "pointer",
+                    cursor: "default",
+                    userSelect: "none",
                     transition: "all 0.25s ease",
                     boxShadow: isCurrent ? "0 8px 25px rgba(0, 180, 197, 0.2)" : "none",
                   }}
@@ -217,7 +216,7 @@ export default function VirtualStageExperience() {
                   <div style={{ fontSize: "14.5px", fontWeight: 700, color: isCurrent ? "#FFFFFF" : "#E2E8F0", lineHeight: 1.35 }}>
                     {pillar.title}
                   </div>
-                </button>
+                </div>
               );
             })}
 
