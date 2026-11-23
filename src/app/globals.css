@@ -1080,13 +1080,114 @@ code {
 }
 
 /* ==========================================================================
-   COMPONENT C4: CONSTITUENCY STACK
+   COMPONENT C4: CONSTITUENCY STACK (ALTERNATING IMAGE & CONTENT)
    ========================================================================== */
 .constituency-stack {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  margin-top: 40px;
+  gap: 32px;
+  margin-top: 36px;
+}
+
+.constituency-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 180, 197, 0.25);
+  border-radius: var(--radius-xl);
+  padding: 36px 40px;
+  box-shadow: 0 4px 20px rgba(11, 15, 42, 0.04);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.constituency-card:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 16px 36px -8px rgba(0, 69, 200, 0.12);
+  transform: translateY(-2px);
+}
+
+.constituency-card.image-left .constituency-img-col {
+  order: 1;
+}
+.constituency-card.image-left .constituency-text-col {
+  order: 2;
+}
+
+.constituency-card.image-right .constituency-text-col {
+  order: 1;
+}
+.constituency-card.image-right .constituency-img-col {
+  order: 2;
+}
+
+.constituency-img-col {
+  position: relative;
+  width: 100%;
+  height: 290px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.constituency-img-col img {
+  transition: transform 0.5s ease;
+}
+
+.constituency-card:hover .constituency-img-col img {
+  transform: scale(1.03);
+}
+
+.constituency-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(0, 69, 200, 0.07);
+  border: 1px solid rgba(0, 69, 200, 0.2);
+  color: var(--cobalt);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+
+.constituency-text-col h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 12px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.constituency-text-col p {
+  font-size: 15px;
+  color: var(--grey);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.constituency-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.constituency-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  color: #475569;
+  background: #F1F5F9;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 500;
 }
 
 .constituency-row {

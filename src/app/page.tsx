@@ -196,10 +196,13 @@ export default function HomePage() {
         </section>
 
         {/* S7 · Who is in the room ("Five groups. One shared build.") */}
-        <section className="section section-light">
+        <section className="section section-light" id="section-constituencies">
           <div className="container">
+            <div className="eyebrow eyebrow-dark">Who is in the room</div>
             <h2>Five groups. One shared build.</h2>
-            <p>The summit convenes the interlocking ecosystem that decides, operates and funds production AI infrastructure in Malaysia.</p>
+            <p style={{ maxWidth: "760px", marginBottom: "36px", fontSize: "16px", color: "var(--grey)", lineHeight: 1.6 }}>
+              The summit convenes the interlocking ecosystem that decides, operates and funds production AI infrastructure in Malaysia.
+            </p>
 
             <ConstituencyStack />
           </div>
